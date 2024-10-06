@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import _ from 'lodash'; 
-const { random } = _; 
+import { random } from 'lodash';
+
 const answers = () => {
     console.log('Welcome to the Brain Games!');
 
@@ -10,25 +10,10 @@ const answers = () => {
     
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
       
-      const num = random(0, 1000);
+    const num = random(0, 1000);
     const UserAnswer = readlineSync.question(`Question: ${num} `);
     console.log('Your answer: ' + UserAnswer);
-     const isEvenCheck = (answer, number) => {  
-     let isEven
-      if (number % 2 === 0) {
-        isEven = 'yes';
-      } else {
-        isEven = 'no';
-      }
-      if (answer === isEven) {
-        return 'Correct!'
-      } else {
-        console.error(`'${answer}' is wrong answer ;(. Correct answer was '${isEven}'.
-Let's try again, ${userName}`); 
-      };
-    };
-    console.log(isEvenCheck(UserAnswer, num));
-    
+       
     const num2 = random(0, 1000);
     const UserAnswer2 = readlineSync.question(`Question: ${num2} `);
     console.log('Your answer: ' + UserAnswer2);
@@ -38,7 +23,25 @@ Let's try again, ${userName}`);
     const UserAnswer3 = readlineSync.question(`Question: ${num3} `);
     console.log('Your answer: ' + UserAnswer3);
     console.log(isEvenCheck(UserAnswer3, num3));
+  
+    const userAnswers = [UserAnswer, UserAnswer2, UserAnswer3];
+  
+    for (const answer of userAnswers) {
+      const isEvenCheck = (answer, number) => {
+        let isEven
+        if (number % 2 === 0) {
+          isEven = 'yes';
+        } else {
+          isEven = 'no';
+        }
 
-};
+      if (answer === isEven) {
+          return 'Correct!'
+     } else {
+      throw new Error(`'${answer}' is wrong answer ;(. Correct answer was '${isEven}'.
+Let's try again, ${userName}`);  
+    };
+    console.log(isEvenCheck(UserAnswer, num));
+  };
 
 export default answers;
