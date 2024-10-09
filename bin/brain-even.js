@@ -1,3 +1,4 @@
-import answers from '../stc/even.js';
+import { welcome, gameLoop } from '../stc/even.js';
 
-answers();
+const userName = welcome();
+gameLoop(userName);
