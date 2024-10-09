@@ -1,6 +1,6 @@
 install:
 	npm ci
-brain-games:
+brain-even:
 	node ./bin/brain-even.js
 publish:
 	npm publish --dry-run
