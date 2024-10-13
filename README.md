@@ -4,3 +4,6 @@
 ## Codclimate:
 [![Maintainability](https://api.codeclimate.com/v1/badges/da2ee471f865525d89c7/maintainability)](https://codeclimate.com/github/trrilya/backend-project-44/maintainability)
 
+## Asciinema:
+
+https://asciinema.org/a/AE4eW5p5ZYi1X44ckDGqDFvyi
