@@ -6,7 +6,8 @@ const { random } = _;
 const welcome = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
-  console.log('Hello, ' + userName + '!');
+  console.log(`Hello, ${userName}!
+Answer "yes" if the number is even, otherwise answer "no".`);
   return userName;
 };
 
