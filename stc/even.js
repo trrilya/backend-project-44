@@ -20,7 +20,7 @@ const gameLoop = (userName, counter = 0) => {
   const userAnswer = readlineSync.question(`Question: ${num} `);
   const isEven = num % 2 === 0 ? 'yes' : 'no';
 
-  if (userAnswer === isEven) {
+  if (userAnswer.toLowerCase() === isEven) {
     console.log('Correct!');
     gameLoop(userName, counter + 1);
   } else {
