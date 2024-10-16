@@ -7,7 +7,7 @@ const welcome = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!
-Answer "yes" if the number is even, otherwise answer "no".`);
+What is the result of the expression?`);
   return userName;
 };
 
@@ -17,17 +17,18 @@ const gameCalc = (userName, counter = 0) => {
     return;
   }
 
-  const num = random(0, 1000);
-  const num2 = random(0,1000);
-  const operation = ['-', '+', '*'];
-  const userAnswer = readlineSync.question(`Question: ${num} ${operation} ${num2}`);
-  const isEven = num % 2 === 0 ? 'yes' : 'no';
+  const num = random(0, 10);
+  const num2 = random(0, 10);
+  const operations= [`${num} * ${num2}`, `${num} + ${num2}`, `${num} - ${num2}`];
+  const operation = operations [random(0, 2)]
+  const userAnswer = readlineSync.question(`Question: ${operation} `);
+  const result = eval(operation); 
 
-  if (userAnswer.toLowerCase() === isEven) {
+  if (parseInt(userAnswer) === result) {
     console.log('Correct!');
-    gameLoop(userName, counter + 1);
+    gameCalc(userName, counter + 1);
   } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven}'.`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.`);
     console.log(`Let's try again, ${userName}!`);
     return; 
   }
