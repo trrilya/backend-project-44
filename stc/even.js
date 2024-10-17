@@ -11,7 +11,7 @@ Answer "yes" if the number is even, otherwise answer "no".`);
   return userName;
 };
 
-const gameLoop = (userName, counter = 0) => {
+const gameEven = (userName, counter = 0) => {
   if (counter === 3) {
     console.log(`Congratulations, ${userName}!`);
     return;
@@ -19,16 +19,16 @@ const gameLoop = (userName, counter = 0) => {
 
   const num = random(0, 1000);
   const userAnswer = readlineSync.question(`Question: ${num} `);
-  const isEven = num % 2 === 0 ? 'yes' : 'no';
+  const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
 
-  if (userAnswer.toLowerCase() === isEven) {
+  if (userAnswer.toLowerCase() === correctAnswer) {
     console.log('Correct!');
-    gameLoop(userName, counter + 1);
+    gameEven(userName, counter + 1);
   } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven}'.`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${userName}!`);
     return; 
   }
 };
 
-export { welcome, gameLoop };
+export { welcome, gameEven };
