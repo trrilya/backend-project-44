@@ -22,13 +22,13 @@ const gameCalc = (userName, counter = 0) => {
   const operations= [`${num} * ${num2}`, `${num} + ${num2}`, `${num} - ${num2}`];
   const operation = operations [random(0, 2)]
   const userAnswer = readlineSync.question(`Question: ${operation} `);
-  const result = eval(operation); 
+  const correctAnswer = eval(operation); 
 
-  if (parseInt(userAnswer) === result) {
+  if (parseInt(userAnswer) === correctAnswer) {
     console.log('Correct!');
     gameCalc(userName, counter + 1);
   } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.`);
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${userName}!`);
     return; 
   }
