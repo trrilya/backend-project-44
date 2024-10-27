@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { welcome, gameLoop } from '../stc/even.js';
+import runGame from '../src/logic.js';
+import evenGame from '../games/even.js';
 
-const userName = welcome();
-gameEven(userName);
+runGame(evenGame);
