@@ -10,4 +10,6 @@ brain-calc:
 	node src/index.js calc
 brain-gcd:
 	node src/index.js gcd
+brain-progression:
+	node src/index.js progression
 	
