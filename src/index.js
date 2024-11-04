@@ -4,6 +4,7 @@ import calcGame from '../games/calc.js';
 import evenGame from '../games/even.js';
 import gcdGame from '../games/gcd.js';
 import progressionGame from '../games/progression.js';
+import primeGame from '../games/prime.js';
 
 switch (process.argv[2]) {
   case 'even':
@@ -18,7 +19,10 @@ switch (process.argv[2]) {
   case 'progression':
     runGame(progressionGame);
     break;
+  case 'prime':
+    runGame(primeGame);
+      break;
   default:
     console.log("Unknown game");
     process.exit(1);
-}
+};

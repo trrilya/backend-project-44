@@ -12,4 +12,6 @@ brain-gcd:
 	node src/index.js gcd
 brain-progression:
 	node src/index.js progression
+brain-prime:
+	node src/index.js prime
 	
