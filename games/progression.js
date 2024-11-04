@@ -35,7 +35,7 @@ const generateRound = () => {
       const newValue = `..`;
       const newProgression = progression.map((element, index) => index === targetIndex ? newValue : element);
       
-  const question = `${newProgression}`;
+  const question = `${newProgression.join(' ')}`;
   const correctAnswer = progression[targetIndex];
 
   return { question, correctAnswer };
