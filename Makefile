@@ -1,11 +1,13 @@
 install:
 	npm ci
-brain-even:
-	node src/index.js even
 publish:
 	npm publish --dry-run
 lint:
 	npx eslint
+brain-games:
+	node bin/brain-games.js
+brain-even:
+	node src/index.js even
 brain-calc:
 	node src/index.js calc
 brain-gcd:
