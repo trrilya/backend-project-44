@@ -25,4 +25,4 @@ case 'prime':
 default:
   console.log('Unknown game');
   process.exit(1);
-};
+}

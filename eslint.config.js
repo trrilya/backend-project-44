@@ -15,6 +15,7 @@ export default [
       'eol-last': ['error', 'always'],
       'quotes': ['error', 'single'],
       'indent': ['error', 2],
+      'no-extra-semi': 'error'
     },
   },
   pluginJs.configs.recommended,
