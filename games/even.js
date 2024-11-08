@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import _ from 'lodash';
+
 const { random } = _;
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';

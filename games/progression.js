@@ -10,7 +10,7 @@ const generateRound = () => {
   function createProgression(start, difference, length) {
     const progression = [];
 
-    for (let i = 0; i < length; i += 1) { // Избегаем использования ++
+    for (let i = 0; i < length; i += 1) { 
       progression.push(start + i * difference);
     }
 
@@ -25,12 +25,10 @@ const generateRound = () => {
   const targetIndex = random(0, length - 1);
   const newValue = '..';
 
-  // Упрощаем условие для map
-  const newProgression = progression.map((element, index) => {
-    return index === targetIndex ? newValue : element;
-  });
+  const newProgression = progression.map((element, index) => 
+    index === targetIndex ? newValue : element
+  );
 
-  // Разбиваем длинные строки
   const question = `${newProgression.join(' ')}`;
   const correctAnswer = progression[targetIndex].toString();
 
@@ -38,3 +36,4 @@ const generateRound = () => {
 };
 
 export default { description, generateRound };
+
