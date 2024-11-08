@@ -10,13 +10,14 @@ export default [
       js: pluginJs,
     },
     rules: {
-      'no-trailing-spaces': 'error',
-      'no-multiple-empty-lines': ['error', { max: 1 }],
-      'eol-last': ['error', 'always'],
-      'quotes': ['error', 'single'],
-      'indent': ['error', 2],
-      'no-extra-semi': 'error'
+      no-trailing-spaces: 'error',
+      no-multiple-empty-lines: ['error', { max: 1 }],
+      eol-last: ['error', 'always'],
+      quotes: ['error', 'single'],
+      indent: ['error', 2],
+      no-extra-semi: 'error',
     },
   },
   pluginJs.configs.recommended,
 ];
+

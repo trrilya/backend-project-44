@@ -26,4 +26,3 @@ switch (process.argv[2]) {
     console.log('Unknown game');
     process.exit(1);
 }
-
