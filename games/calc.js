@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import _ from 'lodash';
+
 const { random } = _;
 
 const description = 'What is the result of the expression?';
@@ -27,7 +28,7 @@ const generateRound = () => {
       throw new Error(`Unknown operation: ${operation}`);
   }
 
-  return { question, correctAnswer: correctAnswer.toString() }; 
+  return { question, correctAnswer: correctAnswer.toString() };
 };
 
 export default { description, generateRound };

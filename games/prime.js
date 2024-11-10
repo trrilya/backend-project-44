@@ -10,7 +10,7 @@ const generateRound = () => {
   
   function isPrime(n) {
     if (n <= 1) return 'no'; 
-    for (let i = 2; i <= Math.sqrt(n); i++) {
+    for (let i = 2; i <= Math.sqrt(n); i += 1) { 
       if (n % i === 0) return 'no';
     }
     return 'yes';
