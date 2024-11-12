@@ -46,6 +46,6 @@ if (!game) {
   process.exit(1);
 }
 
-runGame(game);
+export default runGame;
 
 export { maxRounds };
